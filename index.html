@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&family=Titillium+Web:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="page.css">
+    <title>Mr Clothing</title>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-NF2ZMRRZ');</script>
+    <!-- End Google Tag Manager -->
+
+    <script>
+      // Standard Events
+
+      function trackPageView() {
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+          'event': 'page_view',
+          'page_url': window.location.href,
+          'page_title': document.title,
+          'platform': 'pinterest',
+          'user_id': 'USER1234',
+          'user_role': 'guest',  // Extra parameter
+          'device_type': 'desktop' // Extra parameter
+        });
+      }
+
+      function trackSearch() {
+        var search_term = document.getElementById('search_box').value;
+        window.dataLayer.push({
+          'event': 'search',
+          'search_string': search_term,
+          'event_category': 'Search',
+          'platform': 'ga4',
+          'event_label': 'User Search',
+          'user_id': 'USER1234',
+          'search_location': 'header',  // Extra parameter
+          'items_per_page': 10  // Extra parameter
+        });
+      }
+
+      function trackLogin() {
+        window.dataLayer.push({
+          'event': 'login',
+          'method': 'Email',
+          'platform': 'linkedin',
+          'user_id': 'USER1234',
+          'login_status': 'success',  // Extra parameter
+          'session_duration': 300  // Extra parameter
+        });
+      }
+
+      function trackPurchase() {
+        window.dataLayer.push({
+          'event': 'purchase',
+          'transaction_id': 'T12345',
+          'value': 59.99,
+          'currency': 'USD',
+          'platform': 'twitter',
+          'item_name': 'Shoes',
+          'user_id': 'USER1234',
+          'shipping_method': 'express',  // Extra parameter
+          'discount_code': 'SUMMER2024'  // Extra parameter
+        });
+      }
+
+      function trackSignup() {
+        window.dataLayer.push({
+          'event': 'signup',
+          'sign_up_method': 'email',
+          'platform': 'mixpanel',
+          'user_id': 'USER1234',
+          'user_type': 'premium',  // Extra parameter
+          'referral_code': 'FRIEND2024'  // Extra parameter
+        });
+      }
+
+      function trackAddToCart() {
+        window.dataLayer.push({
+          'event': 'add_to_cart',
+          'product_name': 'Shoes',
+          'price': 59.99,
+          'currency': 'USD',
+          'platform': 'snapchat',
+          'user_id': 'USER1234',
+          'cart_quantity': 1,  // Extra parameter
+          'color': 'black'  // Extra parameter
+        });
+      }
+
+      function trackInitiateCheckout() {
+        window.dataLayer.push({
+          'event': 'initiate_checkout',
+          'order_id': '1210',
+          'order_quantity': 1,
+          'price': '34',
+          'currency': 'INR',
+          'platform': 'ga4',
+          'user_id': 'USER1234',
+          'payment_method': 'credit_card',  // Extra parameter
+          'shipping_estimate': '2 days'  // Extra parameter
+        });
+      }
+
+      function trackViewCategory() {
+        window.dataLayer.push({
+          'event': 'view_category',
+          'category_name': 'Winter Collection',
+          'platform': 'pinterest',
+          'user_id': 'USER1234',
+          'items_in_category': 20,  // Extra parameter
+          'sorting_option': 'price_asc',  // Extra parameter
+          'currency' : 'USD',
+          'value':'123'
+        });
+      }
+
+      function trackRemoveFromCart() {
+        window.dataLayer.push({
+          'event': 'remove_from_cart',
+          'product_name': 'Shoes',
+          'price': 59.99,
+          'currency': 'USD',
+          'platform': 'snapchat',
+          'user_id': 'USER1234',
+          'remove_reason': 'changed_mind',  // Extra parameter
+          'time_spent_in_cart': '10 minutes'  // Extra parameter
+        });
+      }
+
+      function trackSelectItem() {
+        window.dataLayer.push({
+          'event': 'select_item',
+          'product_name': 'T-shirt',
+          'price': 29.99,
+          'currency': 'USD',
+          'platform': 'twitter',
+          'user_id': 'USER1234',
+          'size': 'M',  // Extra parameter
+          'availability': 'in_stock'  // Extra parameter
+        });
+      }
+
+      // Custom Events
+
+      function trackCustomEvent1() {
+        window.dataLayer.push({
+          'event': 'interaction',
+          'product': 'Perfumes',
+          'platform': 'mixpanel',
+          'event_label': 'Hovered on Perfumes',
+          'user_id': 'USER1234',
+          'hover_duration': '2 seconds',  // Extra parameter
+          'interaction_type': 'hover'  // Extra parameter
+        });
+      }
+
+      function trackCustomEvent2() {
+        window.dataLayer.push({
+          'event': 'watch_view',
+          'item': 'Watches',
+          'platform': 'twitter',
+          'event_label': 'Clicked Show More on Watches',
+          'user_id': 'USER1234',
+          'time_spent': '5 minutes',  // Extra parameter
+          'click_position': 'middle'  // Extra parameter
+        });
+      }
+
+      function trackCustomEvent3() {
+        window.dataLayer.push({
+          'event': 'focus_input',
+          'interaction_type': 'focus_input',
+          'platform': 'linkedin',
+          'user_id': 'USER1234',
+          'input_type': 'search_box',  // Extra parameter
+          'focus_duration': '3 seconds'  // Extra parameter
+        });
+      }
+
+      function trackCustomEvent4() {
+        window.dataLayer.push({
+          'event': 'add_to_wishlist',
+          'product_name': 'Perfumes',
+          'platform': 'snapchat',
+          'user_id': 'USER1234',
+          'wishlist_size': 5,  // Extra parameter
+          'time_spent_before_wishlist': '1 minute'  // Extra parameter
+        });
+      }
+
+      function trackCustomEvent5() {
+        window.dataLayer.push({
+          'event': 'header_click',
+          'interaction_type': 'click_header',
+          'platform': 'ga4',
+          'user_id': 'USER1234',
+          'section_name': 'top',  // Extra parameter
+          'click_count': 1  // Extra parameter
+        });
+      }
+
+      function trackCustomEvent6() {
+        window.dataLayer.push({
+          'event': 'newsletter_signup',
+          'platform': 'pinterest',
+          'user_id': 'USER1234',
+          'newsletter_type': 'weekly',  // Extra parameter
+          'sign_up_date': '2024-10-01'  // Extra parameter
+        });
+      }
+
+      function trackCustomEvent7() {
+        window.dataLayer.push({
+          'event': 'custom_video_play',
+          'video_title': 'Promo Video',
+          'platform': 'linkedin',
+          'user_id': 'USER1234',
+          'video_length': '30 seconds',  // Extra parameter
+          'view_duration': '25 seconds'  // Extra parameter
+        });
+      }
+
+      function trackCustomEvent8() {
+        window.dataLayer.push({
+          'event': 'view_product_details',
+          'product_name': 'Sneakers',
+          'platform': 'twitter',
+          'user_id': 'USER1234',
+          'product_color': 'white',  // Extra parameter
+          'view_duration': '15 seconds'  // Extra parameter
+        });
+      }
+
+      function trackCustomEvent9() {
+        window.dataLayer.push({
+          'event': 'scroll_depth',
+          'depth': '50%',
+          'platform': 'mixpanel',
+          'user_id': 'USER1234',
+          'scroll_speed': 'fast',  // Extra parameter
+          'content_type': 'homepage'  // Extra parameter
+        });
+      }
+
+      function trackCustomEvent10() {
+        window.dataLayer.push({
+          'event': 'contact_form_submit',
+          'platform': 'snapchat',
+          'user_id': 'USER1234',
+          'form_type': 'support',  // Extra parameter
+          'response_time': '2 hours'  // Extra parameter
+        });
+      }
+    </script>
+</head>
+<body onload="trackPageView()">
+
+    <header>
+        <h1>Mr Clothing</h1>
+        <nav>
+            <input type="text" id="search_box" placeholder="Search products">
+            <button onclick="trackSearch()">Search</button>
+            <button onclick="trackLogin()">Login</button>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Featured Products</h2>
+            <button onclick="trackSelectItem()">Select T-shirt</button>
+            <button onclick="trackAddToCart()">Add to Cart</button>
+            <button onclick="trackRemoveFromCart()">Remove from Cart</button>
+        </section>
+        <section>
+            <h2>Categories</h2>
+            <button onclick="trackViewCategory()">View Winter Collection</button>
+        </section>
+        <section>
+            <h2>Custom Interactions</h2>
+            <button onclick="trackCustomEvent1()">Hover on Perfumes</button>
+            <button onclick="trackCustomEvent2()">Show More on Watches</button>
+            <button onclick="trackCustomEvent4()">Add Perfumes to Wishlist</button>
+        </section>
+    </main>
+
+    <footer>
+        <button onclick="trackCustomEvent10()">Submit Contact Form</button>
+        <button onclick="trackPurchase()">Complete Purchase</button>
+        <button onclick="trackInitiateCheckout()">Initiate Checkout</button>
+    </footer>
+
+</body>
+</html>
+
